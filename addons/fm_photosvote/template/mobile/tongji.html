@@ -1,0 +1,16 @@
+<style>
+    .box{display:-moz-box;display:-webkit-box;display:box}
+    .boxflex{-moz-box-flex:1;-webkit-box-flex:1;box-flex:1}
+    .vote-count{width:100%}
+    .vote-count-f,.vote-count-s,.vote-count-t{padding:5px}
+    .vote-count-f span,.vote-count-s span,.vote-count-t span{display:block;text-align:center;width:100%;height:47px;line-height:20px;padding:5px 0;color:#fff;font-size:12px;border-radius:5px}
+    .vote-count-f span strong,.vote-count-s span strong,.vote-count-t span strong{font-size:18px}
+    .vote-count-f span{background-color:#9a99ff}
+    .vote-count-s span{background-color:#ff999c}
+    .vote-count-t span{background-color:#33cb98}
+</style>
+<div class="vote-count box">
+    <div class="vote-count-f boxflex"><span>{if empty($reply['csrs'])}参赛人数{else}{$reply['csrs']}{/if}<br><strong id="join_num">{$csrs}</strong></span></div>
+    <div class="vote-count-s boxflex"><span>{if empty($reply['ljtp'])}累计投票{else}{$reply['ljtp']}{/if}<br><strong id="vote_num">{$ljtp}</strong></span></div>
+    <div class="vote-count-t boxflex"><span>{if empty($reply['cyrs'])}参与人数{else}{$reply['cyrs']}{/if}<br><strong id="pv_num">{$cyrs}</strong></span></div>
+</div>
